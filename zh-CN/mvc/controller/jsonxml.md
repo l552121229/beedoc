@@ -12,6 +12,9 @@ beego 当初设计的时候就考虑了 API 功能的设计，而我们在设计
 - JSON 数据直接输出：
 
 	```go
+	type mystruct struct {
+		FieldOne string `json:"field_one"`
+	}
 	func (this *AddController) Get() {
 		mystruct := { ... }
 		this.Data["json"] = &mystruct
